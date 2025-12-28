@@ -55,6 +55,7 @@ def validate_order_items(items: pd.DataFrame, orders: pd.DataFrame) -> Tuple[pd.
     # Find quantity must be NOT NULL, unit_price must be > 0
     field_valid_mask = (
         ~ items['quantity'].isna() &
+        ~ items['unit_price'].isna() &
         (items['unit_price'] > 0)
     )
 

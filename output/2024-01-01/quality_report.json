@@ -1,0 +1,24 @@
+{
+  "run_date": "2024-01-01",
+  "input": {
+    "orders": 4,
+    "order_items": 6
+  },
+  "note": "Clean + Standardize raw data, Validate the cleansed data, Compute the daily revenue, Write to output file",
+  "valid": {
+    "orders": 4,
+    "order_items": 3
+  },
+  "rejected": {
+    "orders": 0,
+    "order_items": 2
+  },
+  "completed_orders": 3,
+  "total_revenue": 70.0,
+  "output_files": {
+    "daily_revenue": "output/2024-01-01/daily_revenue.csv",
+    "rejected_orders": "output/2024-01-01/rejected_orders.csv",
+    "rejected_items": "output/2024-01-01/rejected_items.csv"
+  },
+  "status": "SUCCESS"
+}

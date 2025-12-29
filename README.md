@@ -26,7 +26,7 @@ You will find sample inputs in `/data/`:
 
 Assumptions: 
 - Field `status`: the values in this field are correctly spelled
-- Field `order_date`: this values are in the right format (DD/MM/YYYY)
+- Field `order_date`: this values are in the right format (MM/DD/YYYY)
 - Field `ingested_at`: this values follow the ISO 8601 standard (whch are not null)
 
 

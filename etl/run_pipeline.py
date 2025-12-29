@@ -105,11 +105,11 @@ def main(run_date: str, input_dir: str, output_dir: str) -> None:
     orders = pd.read_csv(orders_file)
     items = pd.read_csv(items_file)
 
-    cleaned_orders = process_orders(orders)
-    cleaned_order_items = process_order_items(items)
+    processed_orders = process_orders(orders)
+    processed_order_items = process_order_items(items)
 
-    valid_orders, rejected_orders = validate_order(cleaned_orders)
-    valid_items, rejected_items = validate_order_items(cleaned_order_items, cleaned_orders)
+    valid_orders, rejected_orders = validate_order(processed_orders)
+    valid_items, rejected_items = validate_order_items(processed_order_items, processed_orders)
 
     revenue = compute_revenue(valid_orders, valid_items)
 

@@ -46,8 +46,8 @@ def validate_order(order: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame]:
         ~ order['status'].isna()
     )
 
-    valid_orders = order.loc[mask].copy()
-    rejected_orders = order.loc[~mask].copy()
+    valid_orders = order.loc[mask]
+    rejected_orders = order.loc[~mask]
 
     return valid_orders, rejected_orders
 
